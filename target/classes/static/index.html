@@ -3,7 +3,7 @@
 
 <head>
     <title>Movie List</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -218,6 +218,94 @@
     background: #4b1f6f;
     color: white;
 }
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 16px 15px;
+        margin: -15px -15px 25px -15px;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .logo {
+        grid-column: 1;
+        font-size: 26px;
+    }
+
+    .nav-left {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .nav-left a {
+        font-size: 16px;
+    }
+
+    /* Heading */
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    /* Search and Filter */
+    .filters {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    #searchBox,
+    #genreFilter {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    /* Movie Cards */
+    #movieList {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .movie-card {
+        width: 100%;
+    }
+
+    .movie-info {
+        padding: 16px;
+    }
+
+    .movie-name {
+        font-size: 21px;
+    }
+
+    .movie-poster {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Pagination */
+    #pagination {
+        gap: 6px;
+        margin-top: 25px;
+    }
+
+    #pagination button {
+        padding: 8px 11px;
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 

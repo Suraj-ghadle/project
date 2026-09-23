@@ -370,15 +370,11 @@
         // Load all movies
         fetch("/movies")
             .then(response => response.json())
-            .then(movies => {
-
-                allMovies = movies;
-
-                loadGenres();
-
-                displayMovies(allMovies);
-
-            })
+          .then(movies => {
+    allMovies = movies.reverse();
+    loadGenres();
+    displayMovies(allMovies);
+})
             .catch(error => {
 
                 console.error("Error:", error);
